@@ -9,20 +9,28 @@
             background-color: #f1f3f4;
         }
 
+        .container {
+            background-color: white;
+            margin: 20px auto;
+            padding: 0;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 1px solid #dcdcdc;
+            overflow: hidden;
+        }
+
         .header {
             background-color: #4285f4;
             color: white;
             padding: 20px;
             text-align: center;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
         }
 
         .content {
-            background-color: white;
-            margin: 20px auto;
             padding: 20px;
-            max-width: 600px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
             .content p {
@@ -43,18 +51,20 @@
     </style>
 </head>
 <body>
-    <div class="header">
-        <h2>New Message from Your Website</h2>
-    </div>
-    <div class="content">
-        <p><strong>Name:</strong> {{name}}</p>
-        <p><strong>Email:</strong> {{email}}</p>
-        <p><strong>Subject:</strong> {{subject}}</p>
-        <p><strong>Message:</strong></p>
-        <p>{{message}}</p>
-    </div>
-    <div class="footer">
-        <p>© 2024 Austin Jiang. All rights reserved.</p>
+    <div class="container">
+        <div class="header">
+            <h2>You Have a New Message from Your Website!</h2>
+        </div>
+        <div class="content">
+            <p><strong>Name:</strong> {{name}}</p>
+            <p><strong>Email:</strong> {{email}}</p>
+            <p><strong>Subject:</strong> {{subject}}</p>
+            <p><strong>Message:</strong></p>
+            <p>{{message}}</p>
+        </div>
+        <div class="footer">
+            <p>© 2024 Austin Jiang. All rights reserved.</p>
+        </div>
     </div>
 </body>
 </html>

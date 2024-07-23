@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .footer {
+            background-color: #f1f1f1;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>New Message from Your Website</h1>
+    </div>
+    <div class="content">
+        <p><strong>Name:</strong> {{name}}</p>
+        <p><strong>Email:</strong> {{email}}</p>
+        <p><strong>Subject:</strong> {{subject}}</p>
+        <p><strong>Message:</strong></p>
+        <p>{{message}}</p>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 austinjiang.com</p>
+    </div>
+</body>
+</html>

@@ -306,11 +306,11 @@
             responsive : {
                 // breakpoint from 0 up
                 0 : {
-                    items: 2,
+                    items: 1,
                 },
                 // breakpoint from 768 up
                 768 : {
-                    items: 3,
+                    items: 2,
                 },
                 1200 : {
                     items: 3,

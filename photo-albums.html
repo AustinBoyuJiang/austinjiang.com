@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Austin Jiang - Blog</title>
+    <title>Austin Jiang - Projects</title>
     <meta name="author" content="Austin Jiang" />
     <link rel="shortcut" type="image/jpg" href="img/favicon.jpg">
     <link rel="icon" type="image/jpg" href="img/favicon.png">
@@ -42,6 +42,7 @@
             <header id="site_header" class="header">
                 <div class="header-content clearfix">
 
+
                     <!-- Text Logo -->
                     <div class="text-logo">
                         <a href="index.html">
@@ -57,13 +58,13 @@
                                 <a href="index.html">Home</a>
                             </li>
 
-                            <li class="menu-item menu-item-has-children">
+                            <li class="menu-item menu-item-has-children current-menu-item">
                                 <a href="about.html">About Me</a>
                                 <ul class="sub-menu">
                                     <li class="menu-item">
                                         <a href="about.html">About Me</a>
                                     </li>
-                                    <li class="menu-item">
+                                    <li class="menu-item current-menu-item">
                                         <a href="photo-albums.html">Photo Albums</a>
                                     </li>
                                 </ul>
@@ -85,10 +86,10 @@
                                 </ul>
                             </li>
 
-                            <li class="menu-item menu-item-has-children current-menu-item">
+                            <li class="menu-item menu-item-has-children">
                                 <a href="blog.html">Blog</a>
                                 <ul class="sub-menu">
-                                    <li class="menu-item current-menu-item">
+                                    <li class="menu-item">
                                         <a href="blog.html">Blog</a>
                                     </li>
                                     <li class="menu-item">
@@ -104,7 +105,6 @@
                     </div>
                     <!-- Navigation -->
 
-
                     <a class="menu-toggle mobile-visible">
                         <i class="fa fa-bars"></i>
                     </a>
@@ -117,20 +117,29 @@
                     <div id="primary" class="content-area">
 
                         <div class="page-title">
-                            <h1>Blog</h1>
+                            <h1>Photo Albums</h1>
                         </div>
 
                         <div id="content" class="page-content site-content single-post" role="main">
 
                             <div class="row">
                                 <div class=" col-xs-12 col-sm-12 ">
+                                    <!-- Portfolio Content -->
+                                    <div id="portfolio_content_q" class="portfolio-content">
 
-                                    <div class="blog-masonry two-columns clearfix">
+                                        <ul class="portfolio-filters">
+                                            <li class="active">
+                                                <a class="filter btn btn-sm btn-link" data-group="category_all">All</a>
+                                            </li>
+                                        </ul>
 
+                                        <!-- Portfolio Grid -->
+                                        <div class="portfolio-grid three-columns shuffle">
+                                        </div>
                                     </div>
+                                    <!-- Portfolio Content -->
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -173,5 +182,6 @@
     <script src="js/jquery.googlemap.js"></script>
     <script src="js/validator.js"></script>
     <script src="js/main.js"></script>
+  
   </body>
 </html>

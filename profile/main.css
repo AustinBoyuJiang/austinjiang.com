@@ -1,0 +1,353 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Container for the left and right sections */
+.cover {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Left section with background image */
+.left {
+    width: 50%;
+    height: 100%;
+}
+
+/* Right section background color */
+.right {
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    overflow: hidden;
+}
+
+/* Canvas to cover entire screen as background */
+#codeCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Center semi-transparent rectangle with text */
+.center-text {
+    position: absolute;
+    top: 38%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 50.02%, rgba(255, 255, 255, 0.14) 50%);
+    padding: 30px 0;
+    text-align: center;
+    font-size: 3em;
+    font-weight: 700;
+    white-space: nowrap;
+    display: flex; 
+    justify-content: center;
+}
+
+
+/* Artistic styling for the left part of the text */
+.left-style {
+    color: #FFD700;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.03em;
+    letter-spacing: 0.1em;
+    text-shadow: 3px 3px 8px rgba(255, 215, 0, 0.6), -2px -2px 6px rgba(255, 105, 180, 0.5);
+    /* transform: rotate(-5deg); */
+    background: linear-gradient(45deg, #FFD700, #FF69B4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Modern coding style for the right part of the text */
+.right-style {
+    color: #00bfff;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    background: linear-gradient(90deg, #38d4ff, hsl(277, 67%, 36%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 5px rgba(0, 255, 255, 0.5);
+    animation: glow 1.5s ease-in-out infinite alternate;
+    font-size: 2em;
+}
+
+/* Glow animation for the right-style text */
+@keyframes glow {
+    from {
+        text-shadow: 0px 0px 5px rgba(0, 221, 255, 0.8), 0px 0px 30px rgba(0, 26, 255, 0.5);
+    }
+    to {
+        text-shadow: 0px 0px 50px rgba(0, 179, 255, 0.8), 0px 0px 30px rgba(0, 166, 255, 0.5);
+    }
+}
+
+/* Left section with three rows of moving images */
+.left {
+    position: relative;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* Cover layer for semi-transparent effect */
+.cover-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+}
+
+.image-row {
+    display: flex;
+    height: calc(100vh / 3);
+    width: 200%; 
+    z-index: 0;
+}
+
+.image-row img {
+    width: auto; 
+    height: 100%;
+    flex-shrink: 0;
+}
+
+/* Arrow Icon Styling */
+.scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    animation: blink 1.5s infinite;
+}
+
+.scroll-indicator-text {
+    margin-bottom: 5px;
+}
+
+.scroll-indicator-text-left{
+    color: #000000;
+}
+
+.scroll-indicator-text-right{
+    color: #ffffff;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.scroll-indicator .line {
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 50.02%, rgba(255, 255, 255, 1) 50%);
+    margin: 0 auto;
+    animation: expandLine 2s ease-out infinite;
+}
+
+@keyframes expandLine {
+    0%, 100% {
+        width: 150px;
+    }
+    50% {
+        width: 250px;
+    }
+}
+
+.content-page {
+    top: 0;
+    height: 100vh;
+    background: white;
+    transform: translateY(0vh);
+    transition: transform 0.5s ease;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    overflow: auto;
+}
+
+.profile-info {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.info-group {
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 5px 0;
+}
+
+ul li {
+    margin-left: 15px;
+}
+
+a{
+    color: #9b46c6;
+}
+
+a:hover{
+    color: #4d0870;
+}
+
+.achievements h2 {
+    color: #444;
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.achievements p {
+    margin-bottom: 10px;
+}
+
+.more-info-link {
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.more-info-link:hover {
+    text-decoration: underline;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contact-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s;
+}
+
+.contact-icons img:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/* Style for header and main container */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.tagline {
+    font-size: 1.2em;
+    color: #555;
+    display: block;
+    margin-top: 20px;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 2.5em;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.color-box1 {
+    background-color: #3498db; /* Blue box color */
+    padding: 40px 320px;
+    position: absolute;
+    z-index: -1; /* Send the box behind the text */
+    animation: rotateBox1 2s infinite alternate ease-in-out, colorChange1 60s infinite linear;
+    transform-origin: center;
+    border-radius: 3px;
+    margin-top: -5px;
+}
+
+/* Keyframes for rotating the color box */
+@keyframes rotateBox1 {
+    0% { transform: rotate(2deg); }
+    100% { transform: rotate(-2deg); }
+}
+.color-box2 {
+    background-color: #5eb8f5; /* Blue box color */
+    padding: 40px 320px;
+    position: absolute;
+    z-index: -2; /* Send the box behind the text */
+    animation: rotateBox2 2s infinite alternate ease-in-out, colorChange2 60s infinite linear;
+    transform-origin: center;
+    border-radius: 3px;
+    margin-top: -5px;
+}
+
+/* Keyframes for rotating the color box */
+@keyframes rotateBox2 {
+    0% { transform: rotate(-2deg); }
+    100% { transform: rotate(2deg); }
+}
+
+@keyframes colorChange1 {
+    0% { background-color: #3498db; }   /* Blue */
+    25% { background-color: #e74c3c; }  /* Red */
+    50% { background-color: #f1c40f; }  /* Yellow */
+    75% { background-color: #2ecc71; }  /* Green */
+    100% { background-color: #3498db; } /* Back to Blue */
+}
+
+@keyframes colorChange2 {
+    0% { background-color: #82bae0; }   /* Blue */
+    25% { background-color: #e19a93; }  /* Red */
+    50% { background-color: #ead57f; }  /* Yellow */
+    75% { background-color: #82d5a5; }  /* Green */
+    100% { background-color: #82bae0; } /* Back to Blue */
+}

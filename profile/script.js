@@ -114,3 +114,12 @@ document.addEventListener("DOMContentLoaded", () => {
       }
   });
 });
+
+const taglines = document.querySelectorAll('.tagline');
+let current = 0;
+
+setInterval(() => {
+  taglines[current].classList.remove('active');
+  current = (current + 1) % taglines.length;
+  taglines[current].classList.add('active');
+}, 2000);

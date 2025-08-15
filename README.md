@@ -15,7 +15,7 @@ A modern, interactive portfolio website built with React and Vite. Features resi
 ## Quick Start
 
 ```bash
-git clone https://github.com/yourusername/personal-portfolio
+git clone https://github.com/AustinBoyuJiang/austinjiang.com
 cd personal-portfolio
 npm install
 npm run dev
@@ -146,4 +146,4 @@ MIT License
 ## Contact
 
 - Email: a68jiang@uwaterloo.ca
-- GitHub: [Issues](https://github.com/yourusername/personal-portfolio/issues)
+- GitHub: [Issues](https://github.com/AustinBoyuJiang/austinjiang.com/issues)

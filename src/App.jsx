@@ -21,11 +21,15 @@ function App() {
   // Handle URL routing for blog posts
   useEffect(() => {
     const path = window.location.pathname
-    if (path.startsWith('/blog/') && blog) {
+    if (path.startsWith('/blog/') && blog && blog.length > 0) {
       const postId = path.replace('/blog/', '')
       const post = blog.find(p => p.id === postId)
       if (post) {
         navigateToBlogPost(post)
+      } else {
+        // 如果找不到对应的blog post，重定向到首页
+        console.warn(`Blog post with id "${postId}" not found`)
+        navigateToHome(true)
       }
     }
   }, [blog])
@@ -127,7 +131,7 @@ function App() {
       const path = window.location.pathname
       if (path === '/') {
         navigateToHome(false)
-      } else if (path.startsWith('/blog/') && blog) {
+      } else if (path.startsWith('/blog/') && blog && blog.length > 0) {
         const postId = path.replace('/blog/', '')
         const post = blog.find(p => p.id === postId)
         if (post) {
@@ -139,7 +143,13 @@ function App() {
             setCurrentPage('blog-post')
           } catch (error) {
             console.error('Failed to load blog post:', error)
+            // 如果加载失败，重定向到首页
+            navigateToHome(true)
           }
+        } else {
+          // 如果找不到对应的blog post，重定向到首页
+          console.warn(`Blog post with id "${postId}" not found`)
+          navigateToHome(true)
         }
       }
     }

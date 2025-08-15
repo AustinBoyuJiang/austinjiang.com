@@ -16,7 +16,7 @@ A modern, interactive portfolio website built with React and Vite. Features resi
 
 ```bash
 git clone https://github.com/AustinBoyuJiang/austinjiang.com
-cd personal-portfolio
+cd austinjiang.com
 npm install
 npm run dev
 ```

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import './App.css'
 import BlogSection from './components/BlogSection'
 import ProjectsSection from './components/ProjectsSection'
@@ -322,6 +323,7 @@ function App() {
             </article>
           </div>
         </div>
+        <Analytics />
       </>
     )
   }
@@ -470,6 +472,7 @@ function App() {
           </div>
         </main>
       </div>
+      <Analytics />
     </>
   )
 }

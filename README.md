@@ -84,6 +84,7 @@ Replace `public/files/Austin_Jiang_CV.pdf` with your CV file.
 - Vite build tool
 - CSS3 with flexbox and grid
 - JavaScript ES6+
+- Vercel Analytics for website analytics
 
 ## Color System
 
@@ -120,6 +121,9 @@ npm run preview
 npm install -g vercel
 vercel --prod
 ```
+
+### Vercel Analytics
+This project includes Vercel Analytics for tracking website performance and visitor insights. Analytics are automatically enabled when deployed to Vercel. No additional configuration is required.
 
 ## Development
 
